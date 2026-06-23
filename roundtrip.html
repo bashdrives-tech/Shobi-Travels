@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18264716985"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18264716985');
+      gtag('config', 'GT-5R6XWLP8');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Round Trip Outstation Taxi | Shobi Travels</title>
@@ -110,6 +120,11 @@
         <button class="btn-quote btn-wa" id="btn-whatsapp" onclick="sendWhatsAppQuote()">BOOK VIA WHATSAPP 💬</button>
     </section>
 
+    <footer class="main-footer" style="padding: 20px; text-align: center; background: white; color: var(--primary-dark);">
+        <div style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px; font-weight: 700;">Booking: +91 88709 18674</div>
+        <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; font-weight: 600;">© 2026 SHOBI TRAVELS.</div>
+    </footer>
+
     <div class="fixed-bottom">
         <a href="tel:+918870918674" class="btn-main-call">📞 CALL NOW</a>
         <a href="https://wa.me/918870918674" class="btn-whatsapp">💬</a>
@@ -156,7 +171,10 @@
         new google.maps.DistanceMatrixService().getDistanceMatrix({
             origins: [origin], destinations: [destination], travelMode: 'DRIVING', unitSystem: google.maps.UnitSystem.METRIC
         }, function(response, status) {
-            if (status !== 'OK' || response.rows[0].elements[0].status === 'ZERO_RESULTS') return;
+            if (status !== 'OK' || response.rows[0].elements[0].status === 'ZERO_RESULTS') {
+                document.getElementById('btn-calculate').innerText = "CALCULATE FARE >";
+                return;
+            }
             
             const distance = response.rows[0].elements[0].distance.value / 1000;
             const durationSec = response.rows[0].elements[0].duration.value;
