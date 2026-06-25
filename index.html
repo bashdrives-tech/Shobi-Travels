@@ -1149,20 +1149,20 @@
 
             <div class="fleet-header">🚐 Fleet Class</div>
             <div class="fleet-grid">
-                <!-- Fleet selectors with original tracking markers - RENAME EXACTLY AS Sedan, SUV, Premium SUV -->
+                <!-- Fleet selectors inside Form - Updated with your exact 'mini' names -->
                 <div class="fleet-card selected" onclick="selectFleet(this)" data-car="Prime Sedan" data-rate-oneway="14" data-rate-round="13">
-                    <img src="sedan.png" alt="Sedan class"> <!-- Fallback matches sedan.* format -->
+                    <img src="sedanmini.png" alt="Sedan class">
                     <div class="fleet-title">Sedan</div>
                     <div class="fleet-price" data-local="CITY TARIFF" data-oneway="₹14/KM" data-round="₹13/KM" data-hourly="₹350/HR">CITY TARIFF</div>
                 </div>
                 <div class="fleet-card" onclick="selectFleet(this)" data-car="Comfort SUV" data-rate-oneway="19" data-rate-round="18">
-                    <img src="suv.png" alt="SUV class"> <!-- Fallback matches suv.* format -->
+                    <img src="suvmini.png" alt="SUV class">
                     <div class="fleet-title">SUV</div>
                     <div class="fleet-price" data-local="CITY TARIFF" data-oneway="₹19/KM" data-round="₹18/KM" data-hourly="₹350/HR">CITY TARIFF</div>
                 </div>
                 <div class="fleet-card full-width" onclick="selectFleet(this)" data-car="Premium SUV" data-rate-oneway="25" data-rate-round="24">
                     <div class="fleet-info-block">
-                        <img src="premium-suv.png" alt="Premium SUV class"> <!-- Fallback matches premium-suv.* format -->
+                        <img src="premium-suv.webp" alt="Premium SUV class">
                         <div style="text-align: right;">
                             <div class="fleet-title">Premium SUV</div>
                             <div class="fleet-price" data-local="CITY TARIFF" data-oneway="₹25/KM" data-round="₹24/KM" data-hourly="₹350/HR">CITY TARIFF</div>
@@ -1236,11 +1236,10 @@
         </div>
         <div class="elite-grid">
             
-            <!-- Sedan Class Card (Placeholder matches sedan.*) -->
+            <!-- Sedan Class Card - Updated to your exact 'sedan.png' name -->
             <div class="elite-card">
                 <div class="elite-badge">4+1 Passengers</div>
                 <div class="elite-img-box">
-                    <!-- Note: points to sedan.png but works with any uploaded sedan.* format -->
                     <img src="sedan.png" alt="Sedan class details">
                 </div>
                 <div class="elite-meta-row">
@@ -1261,11 +1260,10 @@
                 </div>
             </div>
 
-            <!-- SUV Card (Placeholder matches suv.*) -->
+            <!-- SUV Card - Updated to your exact 'suv.png' name -->
             <div class="elite-card">
                 <div class="elite-badge">6+1 Passengers</div>
                 <div class="elite-img-box">
-                    <!-- Note: points to suv.png but works with any uploaded suv.* format -->
                     <img src="suv.png" alt="SUV class details">
                 </div>
                 <div class="elite-meta-row">
@@ -1286,12 +1284,11 @@
                 </div>
             </div>
 
-            <!-- Premium SUV Card (Placeholder matches premium-suv.*) -->
+            <!-- Premium SUV Card - Updated to your exact 'premium-suv.webp' name -->
             <div class="elite-card">
                 <div class="elite-badge">7+1 Passengers</div>
                 <div class="elite-img-box">
-                    <!-- Note: points to premium-suv.png but works with any uploaded premium-suv.* format -->
-                    <img src="premium-suv.png" alt="Premium SUV details">
+                    <img src="premium-suv.webp" alt="Premium SUV details">
                 </div>
                 <div class="elite-meta-row">
                     <div class="elite-info-side">
@@ -1836,6 +1833,22 @@
         
         window.open(`https://wa.me/918870918674?text=${encodeURIComponent(message)}`, "_blank");
     }
+
+    // Extension-Agnostic Image Resolver - Fail-Safe for future extension changes
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function handleError() {
+            const currentSrc = this.src;
+            if (currentSrc.endsWith('.png')) {
+                this.src = currentSrc.replace('.png', '.webp');
+            } else if (currentSrc.endsWith('.webp')) {
+                this.src = currentSrc.replace('.webp', '.jpg');
+            } else if (currentSrc.endsWith('.jpg')) {
+                this.src = currentSrc.replace('.jpg', '.jpeg');
+            } else {
+                this.onerror = null;
+            }
+        });
+    });
 </script>
 
 </body>
