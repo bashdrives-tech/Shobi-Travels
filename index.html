@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) - PRESERVED EXACTLY -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18264716985"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,451 +13,887 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shobi Travels | Premium Local & Outstation Drop Taxi</title>
+    <title>Shobi Travels | Coimbatore Local & Outstation Taxi Services</title>
     
-    <meta name="description" content="Book premium intercity drop taxis and local rides in Coimbatore. Transparent billing, verified drivers, and instant booking with Shobi Travels.">
+    <meta name="description" content="Secure professional intercity drop taxis and local point-to-point rides in Coimbatore. Transparent mileage calculations and verified drivers with Shobi Travels.">
     <meta name="keywords" content="Coimbatore drop taxi, outstation cab, intercity taxi, one way drop taxi, airport transfer Coimbatore, Shobi Travels">
     
-    <!-- Outfit Font (Exact geometric look from screenshot) + Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Modern Sans-Serif Font for fast loading & professional corporate look -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary-dark: #050814; 
-            --accent-yellow: #ffb300; 
-            --bg-light: #f4f6fa; 
-            --text-dark: #0f172a;
-            --text-light: #ffffff;
-            --text-muted: #94a3b8;
-            --wa-green: #25d366;
-            --border-radius-lg: 32px;
-            --border-radius-md: 16px;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-600: #475569;
+            --slate-100: #f1f5f9;
+            --slate-50: #f8fafc;
+            --primary-red: #dc2626; /* Premium Red */
+            --primary-red-hover: #b91c1c; /* Crimson Red Hover */
+            --glow-red: rgba(220, 38, 38, 0.15);
+            --emerald-600: #059669;
+            --emerald-700: #047857;
+            --white: #ffffff;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', 'Poppins', sans-serif; }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+        }
+        
         body { 
-            background-color: var(--primary-dark); 
-            color: var(--text-light); 
-            display: flex; 
-            justify-content: center; 
-            background-image: radial-gradient(circle at 50% 0%, #111634 0%, #050814 100%);
-            background-attachment: fixed;
+            background-color: var(--slate-50); 
+            color: var(--slate-800); 
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .app-wrapper {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
             position: relative;
         }
-        
-        .app-container {
-            width: 100%; max-width: 480px; background-color: transparent;
-            position: relative; min-height: 100vh; padding-bottom: 110px; overflow-x: hidden;
-        }
 
-        /* HEADER (Transparent Fixed Style - scrolls with page) */
+        /* HEADER */
         header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 12px 16px; 
-            background: rgba(255, 255, 255, 0.03); 
-            backdrop-filter: blur(20px); 
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            position: fixed; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 16px 24px; 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(220, 38, 38, 0.12);
+            border-radius: var(--radius-md);
+            position: sticky; 
             top: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 30px);
-            max-width: 450px;
             z-index: 1000;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: var(--shadow-md);
+            margin-top: 15px;
         }
-        .header-spacer {
-            height: 85px; /* Offset to prevent fixed header from covering top of hero content */
-            width: 100%;
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            font-weight: 800; 
+            font-size: 1.1rem; 
+            color: var(--slate-900);
+            letter-spacing: -0.02em; 
         }
-        .logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.15rem; letter-spacing: 0.5px; }
         .logo-icon { 
-            background: var(--accent-yellow); 
-            color: var(--primary-dark); 
-            width: 38px; height: 38px;
-            display: flex; align-items: center; justify-content: center;
-            border-radius: 10px; 
+            background: var(--primary-red); 
+            color: var(--white); 
+            width: 36px; 
+            height: 36px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: var(--radius-sm); 
         }
-        .logo-icon svg { width: 22px; height: 22px; }
-        .header-actions { display: flex; gap: 8px; }
-        .icon-btn { width: 42px; height: 42px; border-radius: 12px; border: none; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.2s; }
-        .btn-call-yellow { background: var(--accent-yellow); color: var(--primary-dark); text-decoration: none; font-size: 1.1rem; }
-        .btn-menu { background: rgba(255, 255, 255, 0.08); color: white; border: 1px solid rgba(255,255,255,0.12); }
-        .btn-menu svg { width: 20px; height: 20px; }
-        .btn-menu:active { transform: scale(0.95); }
+        .logo-icon svg { 
+            width: 20px; 
+            height: 20px; 
+        }
+        
+        /* SUBTLE CALL CTA BREATHING ANIMATION */
+        @keyframes headerCallBreath {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 4px var(--glow-red);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 0 12px rgba(220, 38, 38, 0.35);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 4px var(--glow-red);
+            }
+        }
 
-        /* HERO SECTION */
-        .hero { padding: 10px 20px 25px; text-align: center; }
-        .badge { 
-            display: inline-block; 
-            border: 1px solid rgba(255, 179, 0, 0.25); 
-            color: var(--accent-yellow); 
-            padding: 6px 14px; 
-            border-radius: 30px; 
-            font-size: 0.65rem; 
-            font-weight: 700; 
-            letter-spacing: 1.5px; 
-            margin-bottom: 20px; 
-            background: rgba(255, 179, 0, 0.05); 
-            text-transform: uppercase;
+        .header-actions { 
+            display: flex; 
+            gap: 12px; 
+            align-items: center;
+            position: relative;
         }
-        .hero h1 { font-size: 2.1rem; font-weight: 900; line-height: 1.15; margin-bottom: 12px; text-transform: uppercase; letter-spacing: -0.5px; }
-        .hero h1 span { color: var(--accent-yellow); }
-        .hero p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; margin-bottom: 25px; padding: 0 10px; }
-
-        /* HERO STATS (Under hero text, matching screenshot) */
-        .hero-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
-            margin: 0 20px 30px 20px;
-            text-align: center;
-        }
-        .hero-stat-item {
+        .header-call-cta {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-end;
+            text-align: right;
+            text-decoration: none;
+            padding: 6px 14px;
+            background: var(--white);
+            border: 1.5px solid var(--primary-red);
+            border-radius: var(--radius-sm);
+            animation: headerCallBreath 3s infinite ease-in-out;
+            transition: all 0.2s;
         }
-        .hero-stat-val {
-            font-size: 1.35rem;
-            font-weight: 900;
-            color: var(--accent-yellow);
-            line-height: 1.2;
+        .header-call-cta:hover {
+            border-color: var(--primary-red-hover);
+            background-color: rgba(220, 38, 38, 0.02);
         }
-        .hero-stat-lbl {
-            font-size: 0.6rem;
-            color: var(--text-muted);
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-top: 4px;
+        .header-call-label {
+            font-size: 0.62rem;
+            font-weight: 800;
+            color: var(--primary-red);
             text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1px;
+        }
+        .header-call-number {
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--slate-900);
         }
 
-        /* BOOKING WIDGET (Sleek Floating Card Look with Rounded Gap Margins) */
+        .btn-menu { 
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(220, 38, 38, 0.15);
+            background: var(--slate-50); 
+            color: var(--slate-800); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.25rem;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+        .btn-menu:hover {
+            background-color: var(--slate-100);
+        }
+        .btn-menu:active { 
+            transform: scale(0.95); 
+        }
+
+        /* THREE-DOT DROPDOWN MENU */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 48px;
+            right: 0;
+            background: var(--white);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            width: 200px;
+            z-index: 1010;
+            overflow: hidden;
+        }
+        .dropdown-menu.active {
+            display: block;
+        }
+        .dropdown-item {
+            display: block;
+            width: 100%;
+            padding: 12px 16px;
+            text-align: left;
+            background: none;
+            border: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--slate-700);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .dropdown-item:hover {
+            background: var(--slate-100);
+            color: var(--primary-red);
+        }
+
+        /* COMPLIANCE MODALS */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-container {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 32px;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--slate-100);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--slate-800);
+        }
+        .modal-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--slate-900);
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--slate-100);
+            padding-bottom: 10px;
+        }
+        .modal-body {
+            font-size: 0.85rem;
+            color: var(--slate-600);
+            line-height: 1.6;
+        }
+        .modal-body h4 {
+            font-size: 0.95rem;
+            color: var(--slate-900);
+            margin: 16px 0 6px 0;
+            font-weight: 700;
+        }
+        .modal-body p {
+            margin-bottom: 12px;
+        }
+
+        /* HERO SECTION */
+        .hero { 
+            padding: 60px 0 40px 0; 
+            text-align: center; 
+        }
+        .badge { 
+            display: inline-block; 
+            border: 1px solid rgba(220, 38, 38, 0.15); 
+            color: var(--primary-red); 
+            padding: 6px 14px; 
+            border-radius: 30px; 
+            font-size: 0.72rem; 
+            font-weight: 700; 
+            letter-spacing: 0.05em; 
+            margin-bottom: 20px; 
+            background: rgba(220, 38, 38, 0.04); 
+        }
+        .hero h1 { 
+            font-size: 2.3rem; 
+            font-weight: 800; 
+            line-height: 1.2; 
+            margin-bottom: 16px; 
+            color: var(--slate-900);
+            letter-spacing: -0.03em;
+        }
+        .hero h1 span { 
+            color: var(--primary-red); 
+        }
+        .hero p { 
+            color: var(--slate-600); 
+            font-size: 0.95rem; 
+            line-height: 1.6; 
+            max-width: 640px; 
+            margin: 0 auto;
+        }
+
+        /* PRIMARY LAYOUT CONTAINER */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 30px;
+            margin-bottom: 60px;
+            align-items: start;
+        }
+
+        /* BOOKING WIDGET */
         .booking-widget { 
-            background: #ffffff; 
-            border-radius: var(--border-radius-lg); 
-            padding: 35px 24px 40px; 
-            color: var(--text-dark); 
-            margin: 10px 15px 30px 15px; 
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+            background: var(--white); 
+            border-radius: var(--radius-lg); 
+            padding: 30px 24px; 
+            color: var(--slate-900); 
+            box-shadow: var(--shadow-lg); 
+            border: 1px solid rgba(220, 38, 38, 0.06);
         }
         
-        /* Two-Row Tab Layout Styled Exactly Like Design Screenshot */
+        .tabs-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
         .tabs { 
             display: flex; 
-            background: #f1f5f9; 
-            border-radius: 16px; 
+            background: var(--slate-100); 
+            border-radius: var(--radius-sm); 
             padding: 4px; 
             gap: 4px; 
         }
         .tab { 
             flex: 1; 
             text-align: center; 
-            padding: 13px 8px; 
-            font-size: 0.72rem; 
-            font-weight: 800; 
+            padding: 10px 6px; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
             cursor: pointer; 
-            border-radius: 12px; 
-            color: var(--text-muted); 
+            border-radius: 6px; 
+            color: var(--slate-600); 
             text-transform: uppercase; 
             transition: all 0.2s ease; 
-            letter-spacing: 0.5px;
+            letter-spacing: 0.02em;
         }
         .tab.active { 
-            background: #ffffff; 
-            color: var(--text-dark); 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06); 
+            background: var(--white); 
+            color: var(--primary-red); 
+            box-shadow: var(--shadow-md); 
         }
         
-        .input-group { margin-bottom: 20px; position: relative; }
+        .input-group { 
+            margin-bottom: 18px; 
+            position: relative; 
+        }
         .input-group label { 
             display: flex; 
             align-items: center; 
             gap: 6px; 
-            font-size: 0.65rem; 
-            color: var(--text-muted); 
+            font-size: 0.72rem; 
+            color: var(--slate-600); 
             font-weight: 700; 
-            margin-bottom: 8px; 
+            margin-bottom: 6px; 
             text-transform: uppercase; 
-            letter-spacing: 0.5px;
+            letter-spacing: 0.02em;
         }
         .input-field { 
             width: 100%; 
-            background: var(--bg-light); 
-            border: 1px solid rgba(0,0,0,0.03); 
-            padding: 16px 45px 16px 16px; 
-            border-radius: 14px; 
-            font-size: 0.95rem; 
-            font-weight: 600; 
-            color: var(--text-dark); 
+            background: var(--slate-50); 
+            border: 1px solid rgba(15, 23, 42, 0.12); 
+            padding: 14px 45px 14px 14px; 
+            border-radius: var(--radius-sm); 
+            font-size: 0.9rem; 
+            font-weight: 500; 
+            color: var(--slate-900); 
             outline: none; 
             transition: all 0.2s;
         }
         .input-field:focus {
-            background: #ffffff;
-            border-color: var(--accent-yellow);
-            box-shadow: 0 4px 20px rgba(255, 179, 0, 0.08);
+            background: var(--white);
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
         }
-        .input-row { display: flex; gap: 15px; }
-        .input-row .input-group { flex: 1; }
+        .input-row { 
+            display: flex; 
+            gap: 15px; 
+        }
+        .input-row .input-group { 
+            flex: 1; 
+        }
         
         /* GPS Locator Icon Inside Input */
         .gps-btn {
             position: absolute;
-            right: 15px;
-            bottom: 12px;
+            right: 12px;
+            bottom: 10px;
             background: none;
             border: none;
-            color: var(--text-muted);
+            color: var(--slate-600);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             transition: all 0.2s;
         }
         .gps-btn:hover {
-            color: var(--accent-yellow);
-            background: rgba(255,179,0,0.05);
+            color: var(--primary-red);
+            background: rgba(220, 38, 38, 0.05);
         }
 
-        .fleet-header { font-size: 0.65rem; color: var(--text-muted); font-weight: 700; margin-top: 25px; margin-bottom: 15px; text-transform: uppercase; display: flex; align-items: center; gap: 6px; letter-spacing: 0.5px; }
-        .fleet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px; }
+        .fleet-header { 
+            font-size: 0.72rem; 
+            color: var(--slate-600); 
+            font-weight: 700; 
+            margin-top: 20px; 
+            margin-bottom: 12px; 
+            text-transform: uppercase; 
+            letter-spacing: 0.02em; 
+        }
+        .fleet-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 12px; 
+            margin-bottom: 20px; 
+        }
         
-        /* Fleet card image adjustments for compact, small look */
-        .fleet-card { border: 2px solid var(--bg-light); background: #ffffff; border-radius: var(--border-radius-md); padding: 18px 8px; text-align: center; cursor: pointer; transition: all 0.2s ease; }
-        .fleet-card.selected { border-color: var(--accent-yellow); background: #fffcf0; }
-        .fleet-card.full-width { grid-column: span 2; display: flex; align-items: center; text-align: left; padding: 14px 20px; gap: 15px; }
-        .fleet-card img { height: 35px; object-fit: contain; margin-bottom: 6px; }
-        .fleet-card.full-width img { height: 38px; margin-bottom: 0; }
-        .fleet-card.full-width .fleet-info-block { flex: 1; display: flex; justify-content: space-between; align-items: center; }
-        .fleet-title { font-size: 0.7rem; font-weight: 800; color: var(--text-dark); margin-bottom: 4px; text-transform: uppercase; line-height: 1.3; letter-spacing: 0.3px; }
-        .fleet-card.selected .fleet-title { color: #cc8e00; }
-        .fleet-price { font-size: 0.65rem; color: var(--text-muted); font-weight: 700; letter-spacing: 0.3px; }
+        .fleet-card { 
+            border: 1px solid rgba(15, 23, 42, 0.08); 
+            background: var(--white); 
+            border-radius: var(--radius-md); 
+            padding: 16px 10px; 
+            text-align: center; 
+            cursor: pointer; 
+            transition: all 0.2s ease; 
+        }
+        .fleet-card.selected { 
+            border-color: var(--primary-red); 
+            background: rgba(220, 38, 38, 0.02); 
+        }
+        .fleet-card.full-width { 
+            grid-column: span 2; 
+            display: flex; 
+            align-items: center; 
+            text-align: left; 
+            padding: 12px 16px; 
+            gap: 12px; 
+        }
+        .fleet-card img { 
+            height: 32px; 
+            object-fit: contain; 
+            margin-bottom: 6px; 
+        }
+        .fleet-card.full-width img { 
+            height: 32px; 
+            margin-bottom: 0; 
+        }
+        .fleet-card.full-width .fleet-info-block { 
+            flex: 1; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .fleet-title { 
+            font-size: 0.72rem; 
+            font-weight: 700; 
+            color: var(--slate-900); 
+            margin-bottom: 2px; 
+            text-transform: uppercase; 
+            line-height: 1.3; 
+        }
+        .fleet-card.selected .fleet-title { 
+            color: var(--primary-red); 
+        }
+        .fleet-price { 
+            font-size: 0.68rem; 
+            color: var(--slate-600); 
+            font-weight: 600; 
+        }
 
         /* CALCULATOR UI */
-        .fare-result-box { display: none; background: #fafafa; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px; margin-bottom: 25px; text-align: center; }
-        .fare-result-box h4 { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 1px; margin-bottom: 5px; }
-        .fare-result-box h2 { font-size: 2.2rem; font-weight: 800; color: #cc8e00; margin-bottom: 5px; line-height: 1; }
-        .fare-result-box p { font-size: 0.7rem; color: var(--text-dark); font-weight: 600; }
-
-        /* ACTION BUTTONS (Split Action Layout) */
-        .booking-cta-row {
-            display: flex; gap: 12px; align-items: center; margin-top: 25px;
+        .fare-result-box { 
+            display: none; 
+            background: var(--slate-50); 
+            border: 1px solid rgba(220, 38, 38, 0.12); 
+            border-radius: var(--radius-md); 
+            padding: 16px; 
+            margin-bottom: 20px; 
+            text-align: center; 
         }
-        .btn-quote { border: none; padding: 18px; border-radius: var(--border-radius-md); font-size: 0.95rem; font-weight: 800; letter-spacing: 0.5px; cursor: pointer; transition: all 0.2s; text-transform: uppercase; }
-        .btn-calc { background: #050814; color: white; flex: 1; }
-        .btn-calc:hover { background: #111634; transform: translateY(-2px); }
-        .btn-wa { background: var(--wa-green); color: white; display: none; flex: 1; }
-        .btn-wa:hover { background: #20ba5a; transform: translateY(-2px); }
-        .btn-quote:active { transform: scale(0.98); }
+        .fare-result-box h4 { 
+            font-size: 0.72rem; 
+            color: var(--slate-600); 
+            text-transform: uppercase; 
+            font-weight: 700; 
+            margin-bottom: 4px; 
+        }
+        .fare-result-box h2 { 
+            font-size: 1.8rem; 
+            font-weight: 800; 
+            color: var(--slate-900); 
+            margin-bottom: 4px; 
+            line-height: 1.1; 
+        }
+        .fare-result-box p { 
+            font-size: 0.72rem; 
+            color: var(--slate-600); 
+            font-weight: 500; 
+        }
+
+        /* ACTION BUTTONS */
+        .booking-cta-row {
+            display: flex; 
+            gap: 12px; 
+            align-items: center; 
+            margin-top: 20px;
+        }
+        .btn-quote { 
+            border: none; 
+            padding: 14px 20px; 
+            border-radius: var(--radius-sm); 
+            font-size: 0.85rem; 
+            font-weight: 700; 
+            cursor: pointer; 
+            transition: all 0.2s; 
+            text-transform: uppercase; 
+        }
+        .btn-calc { 
+            background: var(--primary-red); 
+            color: var(--white); 
+            flex: 1; 
+        }
+        .btn-calc:hover { 
+            background: var(--primary-red-hover); 
+            transform: translateY(-1px); 
+        }
+        .btn-wa { 
+            background: var(--emerald-600); 
+            color: var(--white); 
+            display: none; 
+            flex: 1; 
+        }
+        .btn-wa:hover { 
+            background: var(--emerald-700); 
+            transform: translateY(-1px); 
+        }
+        .btn-quote:active { 
+            transform: scale(0.98); 
+        }
         
         .btn-whatsapp-circular {
-            width: 58px; height: 58px; background: var(--wa-green); color: white; border: none; border-radius: 16px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.2s; text-decoration: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2); flex-shrink: 0;
+            width: 48px; 
+            height: 48px; 
+            background: var(--emerald-600); 
+            color: var(--white); 
+            border: none; 
+            border-radius: var(--radius-sm); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            cursor: pointer; 
+            transition: all 0.2s; 
+            text-decoration: none; 
+            box-shadow: 0 4px 10px rgba(5, 150, 105, 0.15); 
+            flex-shrink: 0;
         }
-        .btn-whatsapp-circular:hover { background: #20ba5a; transform: translateY(-2px); }
-        .btn-whatsapp-circular svg { width: 24px; height: 24px; fill: white; }
+        .btn-whatsapp-circular:hover { 
+            background: var(--emerald-700); 
+            transform: translateY(-1px); 
+        }
+        .btn-whatsapp-circular svg { 
+            width: 22px; 
+            height: 22px; 
+            fill: var(--white); 
+        }
 
-        /* NEW SMART TRAVEL SECTION STYLING (Adjusted to Float Card Layout with Rounded Corners) */
-        .smart-travel-section {
-            background-color: #ffffff;
-            color: var(--text-dark);
-            padding: 40px 24px 20px;
-            border-radius: var(--border-radius-lg);
-            margin: 0 15px 15px 15px; /* Clean gap of 15px */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-        }
-        .smart-feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px 20px;
-            margin-bottom: 45px;
-        }
-        .smart-feature-item {
+        /* SIDE PANEL DETAILS */
+        .details-panel {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
+            gap: 24px;
         }
-        .smart-icon-box {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #fffdf2;
-            border: 1px solid rgba(255, 179, 0, 0.12);
-            color: var(--accent-yellow);
+
+        .highlight-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(220, 38, 38, 0.05);
+        }
+        .highlight-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .highlight-card p {
+            font-size: 0.85rem;
+            color: var(--slate-600);
+            line-height: 1.5;
+        }
+
+        /* OUR FLEET SHOWCASE */
+        .fleet-showcase { 
+            background-color: var(--white); 
+            padding: 48px 0; 
+            border-top: 1px solid var(--slate-100);
+            border-bottom: 1px solid var(--slate-100);
+        }
+        .showcase-header { 
+            text-align: center; 
+            margin-bottom: 32px; 
+        }
+        .showcase-header h2 { 
+            font-size: 1.8rem; 
+            font-weight: 800; 
+            color: var(--slate-900); 
+            letter-spacing: -0.02em;
+        }
+        .showcase-header p { 
+            font-size: 0.9rem; 
+            color: var(--slate-600); 
+        }
+        
+        .elite-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .elite-card {
+            background: var(--white);
+            border: 1px solid rgba(220, 38, 38, 0.08);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .elite-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--slate-900);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+        .elite-img-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            min-height: 120px;
+        }
+        .elite-img-box img {
+            max-width: 80%;
+            height: auto;
+            max-height: 100px;
+            object-fit: contain;
+        }
+        .elite-meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid var(--slate-100);
+            padding-top: 14px;
+        }
+        .elite-info-side {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .elite-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--slate-900);
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+        .elite-sub {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .elite-verified {
+            font-size: 0.62rem;
+            font-weight: 700;
+            color: var(--slate-600);
+            text-transform: uppercase;
+        }
+        .elite-price-side {
+            text-align: right;
+        }
+        .elite-price-val {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary-red); 
+            line-height: 1;
+        }
+        .elite-price-val span {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--slate-600);
+        }
+        .elite-price-lbl {
+            font-size: 0.55rem;
+            font-weight: 700;
+            color: var(--slate-600);
+            text-transform: uppercase;
+        }
+        .elite-actions-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .elite-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px;
+            padding: 12px 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s;
+            cursor: pointer;
         }
-        .smart-icon-box svg {
-            width: 22px;
-            height: 22px;
-            stroke-width: 2.5;
+        .elite-btn-details {
+            background: transparent;
+            border: 1px solid rgba(15, 23, 42, 0.15);
+            color: var(--slate-900);
         }
-        .smart-feature-text {
-            font-size: 0.68rem;
-            font-weight: 800;
-            color: var(--text-dark);
-            letter-spacing: 0.6px;
+        .elite-btn-details:hover {
+            background: var(--slate-100);
+        }
+        .elite-btn-book {
+            background: var(--primary-red);
+            border: none;
+            color: var(--white);
+        }
+        .elite-btn-book:hover {
+            background: var(--primary-red-hover);
+        }
+
+        /* TRANSPARENT BILLING DETAILS & SURCHARGES */
+        .billing-transparency {
+            padding: 48px 0;
+            background-color: var(--slate-50);
+        }
+        .billing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .billing-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(220, 38, 38, 0.05);
+        }
+        .billing-card-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(220, 38, 38, 0.05);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-red);
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+        .billing-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: 8px;
             text-transform: uppercase;
         }
+        .billing-card p {
+            font-size: 0.85rem;
+            color: var(--slate-600);
+            line-height: 1.5;
+        }
+
+        /* SMART TRAVEL INFO */
+        .smart-travel-section {
+            background-color: var(--white);
+            padding: 48px 0;
+        }
         .smart-content h2 {
-            font-size: 1.85rem;
-            font-weight: 900;
-            line-height: 1.25;
-            color: var(--primary-dark);
-            margin-bottom: 15px;
-            letter-spacing: -0.3px;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--slate-900);
+            margin-bottom: 12px;
+            text-align: center;
+            letter-spacing: -0.02em;
         }
         .smart-desc {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 30px;
+            font-size: 0.9rem;
+            color: var(--slate-600);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 32px auto;
         }
         .check-list {
-            display: flex;
-            flex-direction: column;
-            gap: 22px;
-            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
         .check-item {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             align-items: flex-start;
         }
         .check-icon {
             flex-shrink: 0;
-            margin-top: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .check-content h4 {
             font-size: 0.95rem;
-            font-weight: 800;
-            color: var(--primary-dark);
+            font-weight: 700;
+            color: var(--slate-900);
             margin-bottom: 4px;
         }
         .check-content p {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        /* HIGHLIGHT CARDS CONTAINER & DETAILS STYLES */
-        .instant-card {
-            background: var(--accent-yellow);
-            border-radius: 28px;
-            padding: 24px 25px; /* Reduced vertical padding */
-            margin: 0 15px 15px 15px; /* Compact bottom spacing to stack nicely */
-            color: var(--primary-dark);
-            box-shadow: 0 10px 30px rgba(255, 179, 0, 0.15);
-        }
-        .instant-icon {
-            width: 46px;
-            height: 46px;
-            background: var(--primary-dark);
-            color: var(--accent-yellow);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-        .instant-card h3 {
-            font-size: 1.35rem;
-            font-weight: 900;
-            margin-bottom: 6px;
-            letter-spacing: -0.3px;
-        }
-        .instant-card p {
             font-size: 0.82rem;
-            font-weight: 600;
-            opacity: 0.9;
+            color: var(--slate-600);
             line-height: 1.4;
         }
 
-        /* Live Support Card (From screenshot matching Instant Booking shape) */
-        .live-support-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 28px;
-            padding: 24px 25px;
-            margin: 0 15px 40px 15px; /* Offset spacing to separate from below blocks */
-            color: var(--text-dark);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-        }
-        .live-support-icon {
-            width: 46px;
-            height: 46px;
-            background: var(--accent-yellow);
-            color: var(--primary-dark);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-        .live-support-icon svg {
-            width: 22px;
-            height: 22px;
-        }
-        .live-support-card h3 {
-            font-size: 1.35rem;
-            font-weight: 900;
-            margin-bottom: 6px;
-            letter-spacing: -0.3px;
-        }
-        .live-support-card p {
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            line-height: 1.4;
-        }
-
-        /* RESERVE YOUR JOURNEY (From screenshot) */
+        /* BOTTOM RESERVE BOX */
         .reserve-section {
-            background: linear-gradient(135deg, #090d22 0%, #050714 100%);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 36px;
-            padding: 55px 30px;
-            margin: 0 15px 40px 15px;
+            background: var(--slate-900);
+            border-radius: var(--radius-lg);
+            padding: 48px 24px;
             text-align: center;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            margin: 40px 0;
         }
         .reserve-section h2 {
-            font-size: 2.2rem;
-            font-weight: 900;
-            line-height: 1.15;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.02em;
         }
         .reserve-section p {
-            font-size: 0.92rem;
-            color: #94a3b8;
-            line-height: 1.6;
-            font-weight: 500;
-            margin: 25px 0 35px 0;
-            max-width: 320px;
+            font-size: 0.9rem;
+            color: var(--slate-600);
+            margin: 12px 0 24px 0;
+            max-width: 480px;
             margin-left: auto;
             margin-right: auto;
         }
         .reserve-btn {
-            background: var(--accent-yellow);
-            color: var(--primary-dark);
-            padding: 16px 28px;
-            border-radius: 30px;
-            font-weight: 900;
-            font-size: 0.78rem;
-            letter-spacing: 1.5px;
+            background: var(--primary-red);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.85rem;
             text-transform: uppercase;
             text-decoration: none;
             display: inline-flex;
@@ -467,257 +903,147 @@
             transition: all 0.2s;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(255, 179, 0, 0.2);
         }
         .reserve-btn:hover {
-            transform: translateY(-2px);
-            background: #eab308;
+            background: var(--primary-red-hover);
+            transform: translateY(-1px);
         }
 
-        /* NEW "OUR ELITE FLEET" SHOWCASE SECTION STYLING (Adjusted to Float Card Layout with Rounded Corners) */
-        .fleet-showcase { 
-            background-color: #ffffff; 
-            padding: 35px 20px; 
-            color: var(--text-dark); 
-            border-radius: var(--border-radius-lg);
-            margin: 0 15px 15px 15px; /* Clean gap of 15px from next card */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); 
+        /* FOOTER */
+        footer {
+            background-color: var(--slate-900);
+            color: var(--slate-600);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px 0;
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
         }
-        .showcase-header { text-align: center; margin-bottom: 30px; }
-        .showcase-header h2 { font-size: 1.8rem; font-weight: 800; color: var(--primary-dark); text-transform: uppercase; }
-        .showcase-header p { font-size: 0.85rem; color: var(--text-muted); }
-        
-        .elite-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .elite-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 28px;
-            padding: 24px 20px;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .elite-badge {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: #0f172a;
-            color: #ffffff;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 0.65rem;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            z-index: 2;
-        }
-        .elite-img-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 15px 10px 5px;
-            min-height: 140px;
-        }
-        .elite-img-box img {
-            max-width: 90%;
-            height: auto;
-            max-height: 120px;
-            object-fit: contain;
-        }
-        .elite-meta-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 15px;
-        }
-        .elite-info-side {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        .elite-title {
-            font-size: 1.15rem;
-            font-weight: 900;
-            color: #0f172a;
-            line-height: 1.25;
-            text-transform: uppercase;
-        }
-        .elite-sub {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .elite-stars {
-            color: #f59e0b; /* Yellow stars */
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-        }
-        .elite-verified {
-            font-size: 0.6rem;
-            font-weight: 800;
-            color: #94a3b8;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        .elite-price-side {
-            text-align: right;
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-        .elite-price-val {
-            font-size: 1.65rem;
-            font-weight: 900;
-            color: #cc8e00; /* Rich gold readable on white background */
-            line-height: 1;
-        }
-        .elite-price-val span {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #94a3b8;
-        }
-        .elite-price-lbl {
-            font-size: 0.55rem;
-            font-weight: 800;
-            color: #94a3b8;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        .elite-actions-row {
+        .footer-grid {
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 12px;
-            margin-top: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            padding-bottom: 30px;
         }
-        .elite-btn {
+        .footer-logo {
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 14px 10px;
-            font-size: 0.75rem;
-            font-weight: 800;
-            letter-spacing: 0.5px;
+            gap: 8px;
+        }
+        .footer-text {
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+        .footer-title {
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 700;
             text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 14px;
-            transition: all 0.2s;
-            cursor: pointer;
+            margin-bottom: 12px;
+            letter-spacing: 0.02em;
         }
-        .elite-btn-details {
-            background: transparent;
-            border: 1px solid #cbd5e1;
-            color: #0f172a;
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
-        .elite-btn-details:hover {
-            background: #f8fafc;
-        }
-        .elite-btn-book {
-            background: var(--accent-yellow);
+        .footer-links button, .footer-links a {
+            color: var(--slate-600);
+            background: none;
             border: none;
-            color: var(--primary-dark);
-            box-shadow: 0 4px 12px rgba(255, 179, 0, 0.15);
+            text-align: left;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s;
+            cursor: pointer;
+            font-weight: 600;
         }
-        .elite-btn-book:hover {
-            transform: translateY(-2px);
-            background: #eab308;
+        .footer-links button:hover, .footer-links a:hover {
+            color: var(--white);
+        }
+        .footer-copyright {
+            text-align: center;
+            font-size: 0.75rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 24px;
         }
 
-        /* RELOCATED SURCHARGES SECTION STYLING (Positions under Tariff Card / Elite Fleet Section with Unified Margin Gap) */
-        .surcharges-section { 
-            background-color: var(--accent-yellow); 
-            border-radius: 28px; 
-            padding: 35px 24px 45px; 
-            color: var(--primary-dark);
-            margin: 0 15px 15px 15px; /* Aligned bottom margin to 15px for consistent spacing */
-            box-shadow: 0 10px 30px rgba(255, 179, 0, 0.1);
-        }
-        .icon-box-dark { width: 50px; height: 50px; border-radius: 16px; background-color: var(--primary-dark); color: var(--accent-yellow); display: flex; justify-content: center; align-items: center; font-size: 1.5rem; margin-bottom: 20px; }
-        .s-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; }
-        .s-card { background-color: #f6c000; border-radius: 20px; padding: 25px 20px; margin-bottom: 15px; }
-        .s-card-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase; }
-        .s-card-text { font-size: 0.9rem; font-weight: 600; line-height: 1.6; }
-
-        /* RESTORED ORIGINAL SIDE NAVIGATION MENU CSS */
-        .menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
-        .menu-overlay.active { opacity: 1; pointer-events: auto; }
-        .side-menu { position: fixed; top: 0; right: -100%; width: 85%; max-width: 400px; height: 100vh; background-color: var(--primary-dark); z-index: 1001; transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); display: flex; flex-direction: column; overflow-y: auto; }
-        .side-menu.active { right: 0; }
-        .side-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #111324; }
-        .side-menu-content { padding: 30px 20px; flex: 1; }
-        .nav-section-title { font-size: 0.75rem; color: var(--text-muted); font-weight: 700; letter-spacing: 1.5px; margin-bottom: 20px; text-transform: uppercase; }
-        .nav-links { display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px; }
-        .nav-links a { color: var(--text-light); text-decoration: none; font-size: 1.1rem; font-weight: 600; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--accent-yellow); }
-        .contact-card { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; text-decoration: none; }
-        .contact-icon-small { width: 45px; height: 45px; border-radius: 12px; background: #1a1c2e; color: var(--accent-yellow); display: flex; justify-content: center; align-items: center; font-size: 1.2rem; }
-        .contact-text { color: var(--text-muted); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px; line-height: 1.4; }
-        .side-menu-footer { padding: 20px; text-align: center; border-top: 1px solid #1a1c2e; margin-top: auto; }
-
-        /* HIGH-CONVERTING GOOGLE ADS SPLIT STICKY BOTTOM BAR */
+        /* STICKY BOTTOM ACTIONS */
         .fixed-bottom { 
             position: fixed; 
             bottom: 15px; 
             left: 50%;
             transform: translateX(-50%);
             width: calc(100% - 30px);
-            max-width: 450px; 
-            background: rgba(255, 255, 255, 0.9); 
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 10px 12px; 
+            max-width: 480px; 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 8px 12px; 
             display: flex; 
             gap: 10px; 
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.5);
-            box-shadow: 0 10px 35px rgba(0,0,0,0.15); 
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(220, 38, 38, 0.12);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
             z-index: 1000; 
         }
         .btn-main-call, .btn-main-whatsapp { 
             flex: 1; 
             border: none; 
-            border-radius: 14px; 
-            font-size: 0.8rem; 
-            font-weight: 800; 
+            border-radius: var(--radius-sm); 
+            font-size: 0.75rem; 
+            font-weight: 700; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             gap: 6px; 
             cursor: pointer; 
             text-decoration: none; 
-            padding: 14px 8px;
+            padding: 12px 6px;
             transition: all 0.2s;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.02em;
             text-transform: uppercase;
         }
         .btn-main-call {
-            background: var(--primary-dark); 
-            color: #ffffff; 
+            background: var(--slate-900); 
+            color: var(--white); 
         }
-        .btn-main-call:hover { background: #111634; }
+        .btn-main-call:hover { 
+            background: var(--slate-800); 
+        }
         .btn-main-whatsapp {
-            background: var(--wa-green); 
-            color: #ffffff; 
+            background: var(--emerald-600); 
+            color: var(--white); 
         }
-        .btn-main-whatsapp:hover { background: #20ba5a; }
+        .btn-main-whatsapp:hover { 
+            background: var(--emerald-700); 
+        }
+
+        /* RESPONSIVE LAYOUT adjustments */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding-bottom: 80px; 
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
     </style>
 </head>
 <body>
 
-<div class="app-container">
-    <!-- Header Fixed Spacer / Smooth Scroll Target For Booking CTAs -->
-    <div class="header-spacer" id="booking-anchor"></div>
+<div class="app-wrapper">
 
+    <!-- Header Block featuring the requested call CTA container -->
     <header>
         <div class="logo">
             <div class="logo-icon">
-                <!-- SVG Car Icon -->
                 <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm11 0c-.83 0-1.5-.67-1.5-1s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 10l1.5-4.5h11L19 10H5z"/>
                 </svg>
@@ -725,426 +1051,481 @@
             SHOBI TRAVELS
         </div>
         <div class="header-actions">
-            <a href="tel:+918870918674" class="icon-btn btn-call-yellow">📞</a>
-            <button class="icon-btn btn-menu" onclick="toggleMenu()">
-                <!-- SVG Burger Menu Icon matching design screenshot -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
+            <!-- Animated call element linking direct cellular dial -->
+            <a href="tel:+918870918674" class="header-call-cta" aria-label="Click here to call Shobi Travels">
+                <span class="header-call-label">Click Here To Call</span>
+                <span class="header-call-number">+91 88709 18674</span>
+            </a>
+            
+            <!-- Three-Dot Compliance Menu Button -->
+            <button class="icon-btn btn-menu" onclick="toggleThreeDotMenu(event)" aria-label="Open information menu" aria-haspopup="true">⋮</button>
+            
+            <!-- Absolute Popover Dropdown Containing All Policies & FAQs -->
+            <div class="dropdown-menu" id="threeDotDropdown">
+                <button class="dropdown-item" onclick="openModal('faqModal')">Frequently Asked Questions</button>
+                <button class="dropdown-item" onclick="openModal('privacyModal')">Privacy Policy</button>
+                <button class="dropdown-item" onclick="openModal('cancellationModal')">Cancellation Policy</button>
+                <button class="dropdown-item" onclick="openModal('termsModal')">Terms of Service</button>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="badge">🟢 COIMBATORE LOCAL & OUTSTATION CAB SERVICE</div>
-        <h1>PREMIUM COIMBATORE<br><span>LOCAL & DROP TAXI</span><br>MOBILITY.</h1>
-        <p>Book instant local rides inside Coimbatore or premium outstation drop taxis with transparent, hassle-free pricing. No hidden fees, professional drivers.</p>
+    <!-- NEW COMPLIANT HERO SECTION -->
+    <section class="hero" id="booking-anchor">
+        <div class="badge">Coimbatore Local & Intercity Taxi Service</div>
+        <h1>Travel Across Coimbatore <br><span>With Confidence</span></h1>
+        <p>Instant local rides and comfortable outstation drops with transparent pricing.</p>
     </section>
 
-    <!-- Stat metrics section matching screenshot with base tariff updated to ₹14/KM -->
-    <section class="hero-stats">
-        <div class="hero-stat-item">
-            <div class="hero-stat-val">₹14/KM</div>
-            <div class="hero-stat-lbl">BASE TARIFF</div>
-        </div>
-        <div class="hero-stat-item">
-            <div class="hero-stat-val">1.5K+</div>
-            <div class="hero-stat-lbl">ROUTES</div>
-        </div>
-        <div class="hero-stat-item">
-            <div class="hero-stat-val">4.9★</div>
-            <div class="hero-stat-lbl">RATING</div>
-        </div>
-    </section>
+    <!-- MAIN TWO-COLUMN BOOKING AND DETAILS INTERFACE -->
+    <div class="main-grid">
+        
+        <!-- COLUMN 1: BOOKING WIDGET -->
+        <section class="booking-widget" aria-label="Booking interface">
+            <input type="hidden" id="active-trip-type" value="COIMBATORE LOCAL">
 
-    <section class="booking-widget">
-        <input type="hidden" id="active-trip-type" value="COIMBATORE LOCAL">
+            <!-- Tab Layout (Unified horizontal block to ensure clean flow) -->
+            <div class="tabs-container">
+                <div class="tabs main-tabs">
+                    <div class="tab active" onclick="switchMainTab(this, 'local')">COIMBATORE LOCAL</div>
+                    <div class="tab" onclick="switchMainTab(this, 'oneway')">ONE WAY</div>
+                </div>
+                <div class="tabs main-tabs">
+                    <div class="tab" onclick="switchMainTab(this, 'roundtrip')">ROUND TRIP</div>
+                    <div class="tab" onclick="switchMainTab(this, 'hourly')">HOURLY RENTALS</div>
+                </div>
+            </div>
 
-        <!-- Two-Row Layout containing the EXACT original 4 tabs structured like screenshot -->
-        <div class="tabs main-tabs" style="margin-bottom: 10px;">
-            <div class="tab active" onclick="switchMainTab(this, 'local')">COIMBATORE LOCAL</div>
-            <div class="tab" onclick="switchMainTab(this, 'oneway')">ONE WAY</div>
-        </div>
-        <div class="tabs main-tabs" style="margin-bottom: 20px;">
-            <div class="tab" onclick="switchMainTab(this, 'roundtrip')">ROUND TRIP</div>
-            <div class="tab" onclick="switchMainTab(this, 'hourly')">HOURLY RENTALS</div>
-        </div>
-
-        <div class="input-group">
-            <label id="pickup-label">📍 Local Pickup (Coimbatore)</label>
-            <input type="text" id="pickup-input" class="input-field" placeholder="Where from?" oninput="resetFareUI()">
-            <!-- Current Location Geolocation Trigger Button -->
-            <button class="gps-btn" onclick="getCurrentLocation()" type="button" title="Use current location">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
-                </svg>
-            </button>
-        </div>
-
-        <div class="input-group" id="drop-location-group">
-            <label id="drop-label">🔺 Local Drop</label>
-            <input type="text" id="drop-input" class="input-field" placeholder="Where to?" oninput="resetFareUI()">
-            
-            <select id="hours-input" class="input-field" style="display:none;" onchange="resetFareUI()">
-                <option value="3">3 Hours (30 KM Included)</option>
-                <option value="4">4 Hours (40 KM Included)</option>
-                <option value="5">5 Hours (50 KM Included)</option>
-                <option value="6">6 Hours (60 KM Included)</option>
-                <option value="8">8 Hours (80 KM Included)</option>
-                <option value="10">10 Hours (100 KM Included)</option>
-                <option value="12">12 Hours (120 KM Included)</option>
-            </select>
-        </div>
-
-        <div class="input-row">
+            <!-- PRESERVED BOOKING INTERACTIVE INPUTS -->
             <div class="input-group">
-                <label>📅 Pickup Date</label>
-                <input type="date" id="date-input" class="input-field" onchange="resetFareUI()">
+                <label id="pickup-label" for="pickup-input">📍 Local Pickup (Coimbatore)</label>
+                <input type="text" id="pickup-input" class="input-field" placeholder="Enter pickup address" oninput="resetFareUI()">
+                <!-- Geolocation trigger -->
+                <button class="gps-btn" onclick="getCurrentLocation()" type="button" title="Detect location">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+                    </svg>
+                </button>
             </div>
-            <div class="input-group">
-                <label>🕒 Pickup Time</label>
-                <input type="time" id="time-input" class="input-field" onchange="resetFareUI()">
-            </div>
-        </div>
 
-        <div class="input-row" id="return-time-row" style="display: none; margin-top: 15px;">
-            <div class="input-group">
-                <label style="color: #d4a300;">📅 Return Date</label>
-                <input type="date" id="return-date-input" class="input-field" onchange="resetFareUI()" style="border: 1px solid #f8c966;">
+            <div class="input-group" id="drop-location-group">
+                <label id="drop-label" for="drop-input">🔺 Local Drop</label>
+                <input type="text" id="drop-input" class="input-field" placeholder="Enter drop address" oninput="resetFareUI()">
+                
+                <select id="hours-input" class="input-field" style="display:none;" onchange="resetFareUI()">
+                    <option value="3">3 Hours (30 KM Included)</option>
+                    <option value="4">4 Hours (40 KM Included)</option>
+                    <option value="5">5 Hours (50 KM Included)</option>
+                    <option value="6">6 Hours (60 KM Included)</option>
+                    <option value="8">8 Hours (80 KM Included)</option>
+                    <option value="10">10 Hours (100 KM Included)</option>
+                    <option value="12">12 Hours (120 KM Included)</option>
+                </select>
             </div>
-            <div class="input-group">
-                <label style="color: #d4a300;">🕒 Return Time</label>
-                <input type="time" id="return-time-input" class="input-field" onchange="resetFareUI()" style="border: 1px solid #f8c966;">
-            </div>
-        </div>
 
-        <div class="fleet-header">🚐 FLEET CATEGORY</div>
-        <div class="fleet-grid">
-            <div class="fleet-card selected" onclick="selectFleet(this)" data-car="Prime Sedan" data-rate-oneway="14" data-rate-round="13">
-                <img src="sedanmini.png" alt="Sedan">
-                <div class="fleet-title">PRIME SEDAN</div>
-                <div class="fleet-price" data-local="CITY TARIFF" data-oneway="₹14/KM" data-round="₹13/KM" data-hourly="₹350/HR">CITY TARIFF</div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="date-input">📅 Pickup Date</label>
+                    <input type="date" id="date-input" class="input-field" onchange="resetFareUI()">
+                </div>
+                <div class="input-group">
+                    <label for="time-input">🕒 Pickup Time</label>
+                    <input type="time" id="time-input" class="input-field" onchange="resetFareUI()">
+                </div>
             </div>
-            <div class="fleet-card" onclick="selectFleet(this)" data-car="Comfort SUV" data-rate-oneway="19" data-rate-round="18">
-                <img src="suvmini.png" alt="SUV">
-                <div class="fleet-title">COMFORT SUV</div>
-                <div class="fleet-price" data-local="CITY TARIFF" data-oneway="₹19/KM" data-round="₹18/KM" data-hourly="₹350/HR">CITY TARIFF</div>
+
+            <div class="input-row" id="return-time-row" style="display: none; margin-top: 15px;">
+                <div class="input-group">
+                    <label style="color: var(--primary-red);" for="return-date-input">📅 Return Date</label>
+                    <input type="date" id="return-date-input" class="input-field" onchange="resetFareUI()" style="border: 1px solid rgba(220,38,38,0.25);">
+                </div>
+                <div class="input-group">
+                    <label style="color: var(--primary-red);" for="return-time-input">🕒 Return Time</label>
+                    <input type="time" id="return-time-input" class="input-field" onchange="resetFareUI()" style="border: 1px solid rgba(220,38,38,0.25);">
+                </div>
             </div>
-            <div class="fleet-card full-width" onclick="selectFleet(this)" data-car="Premium SUV" data-rate-oneway="25" data-rate-round="24">
-                <div class="fleet-info-block">
-                    <img src="premiumsuvmini.png" alt="Premium SUV">
-                    <div style="text-align: right;">
-                        <div class="fleet-title">PREMIUM SUV</div>
-                        <div class="fleet-price" data-local="CITY TARIFF" data-oneway="₹25/KM" data-round="₹24/KM" data-hourly="₹350/HR">CITY TARIFF</div>
+
+            <div class="fleet-header">🚐 Fleet Class</div>
+            <div class="fleet-grid">
+                <!-- Fleet selectors with original tracking markers - RENAME EXACTLY AS Sedan, SUV, Premium SUV -->
+                <div class="fleet-card selected" onclick="selectFleet(this)" data-car="Prime Sedan" data-rate-oneway="14" data-rate-round="13">
+                    <img src="sedan.png" alt="Sedan class"> <!-- Fallback matches sedan.* format -->
+                    <div class="fleet-title">Sedan</div>
+                    <div class="fleet-price" data-local="CITY TARIFF" data-oneway="₹14/KM" data-round="₹13/KM" data-hourly="₹350/HR">CITY TARIFF</div>
+                </div>
+                <div class="fleet-card" onclick="selectFleet(this)" data-car="Comfort SUV" data-rate-oneway="19" data-rate-round="18">
+                    <img src="suv.png" alt="SUV class"> <!-- Fallback matches suv.* format -->
+                    <div class="fleet-title">SUV</div>
+                    <div class="fleet-price" data-local="CITY TARIFF" data-oneway="₹19/KM" data-round="₹18/KM" data-hourly="₹350/HR">CITY TARIFF</div>
+                </div>
+                <div class="fleet-card full-width" onclick="selectFleet(this)" data-car="Premium SUV" data-rate-oneway="25" data-rate-round="24">
+                    <div class="fleet-info-block">
+                        <img src="premium-suv.png" alt="Premium SUV class"> <!-- Fallback matches premium-suv.* format -->
+                        <div style="text-align: right;">
+                            <div class="fleet-title">Premium SUV</div>
+                            <div class="fleet-price" data-local="CITY TARIFF" data-oneway="₹25/KM" data-round="₹24/KM" data-hourly="₹350/HR">CITY TARIFF</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div id="fare-result-box" class="fare-result-box">
-            <h4>Estimated Fare</h4>
-            <h2 id="fare-amount">₹0</h2>
-            <p id="fare-details">Distance Breakdown</p>
-        </div>
+            <div id="fare-result-box" class="fare-result-box">
+                <h4>Estimated Calculation</h4>
+                <h2 id="fare-amount">₹0</h2>
+                <p id="fare-details">Calculation Details</p>
+            </div>
 
-        <!-- Action CTAs matching screenshot layout -->
-        <div class="booking-cta-row">
-            <button class="btn-quote btn-calc" id="btn-calculate" onclick="calculateFare()">CALCULATE FARE ⚡</button>
-            <button class="btn-quote btn-wa" id="btn-whatsapp" onclick="sendWhatsAppQuote()">BOOK VIA WHATSAPP 💬</button>
-            <a href="https://wa.me/918870918674" class="btn-whatsapp-circular" title="Direct WhatsApp Book">
-                <svg viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.115-2.908-6.995-1.878-1.88-4.357-2.912-6.997-2.914-5.443 0-9.873 4.419-9.877 9.864-.001 1.77.461 3.5 1.341 5.042l-.995 3.634 3.747-.982zm11.233-7.534c-.31-.155-1.837-.907-2.122-.101l-.547.747c-.155.155-.31.31-.62.155-1.24-.62-2.12-.928-2.944-1.748-.206-.206-.31-.412-.155-.618l.515-.515c.155-.155.206-.31.31-.515.103-.206.051-.412-.026-.566-.077-.155-.618-1.493-.846-2.04-.22-.53-.443-.456-.607-.464-.156-.008-.337-.008-.517-.008s-.466.067-.711.335c-.246.268-.94.918-.94 2.242s.963 2.6 1.096 2.781c.133.18 1.896 2.896 4.593 4.06.64.277 1.141.443 1.53.567.643.204 1.229.175 1.691.107.514-.077 1.517-.618 1.73-.122s.31.96.206 1.12c-.103.16-.515.258-.773.258z"/>
-                </svg>
-            </a>
-        </div>
-    </section>
+            <!-- Booking and Quote conversion actions -->
+            <div class="booking-cta-row">
+                <button class="btn-quote btn-calc" id="btn-calculate" onclick="calculateFare()">CALCULATE FARE</button>
+                <button class="btn-quote btn-wa" id="btn-whatsapp" onclick="sendWhatsAppQuote()">BOOK VIA WHATSAPP</button>
+                <a href="https://wa.me/918870918674" class="btn-whatsapp-circular" title="Direct WhatsApp booking channel">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.115-2.908-6.995-1.878-1.88-4.357-2.912-6.997-2.914-5.443 0-9.873 4.419-9.877 9.864-.001 1.77.461 3.5 1.341 5.042l-.995 3.634 3.747-.982zm11.233-7.534c-.31-.155-1.837-.907-2.122-.101l-.547.747c-.155.155-.31.31-.62.155-1.24-.62-2.12-.928-2.944-1.748-.206-.206-.31-.412-.155-.618l.515-.515c.155-.155.206-.31.31-.515.103-.206.051-.412-.026-.566-.077-.155-.618-1.493-.846-2.04-.22-.53-.443-.456-.607-.464-.156-.008-.337-.008-.517-.008s-.466.067-.711.335c-.246.268-.94.918-.94 2.242s.963 2.6 1.096 2.781c.133.18 1.896 2.896 4.593 4.06.64.277 1.141.443 1.53.567.643.204 1.229.175 1.691.107.514-.077 1.517-.618 1.73-.122s.31.96.206 1.12c-.103.16-.515.258-.773.258z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
 
-    <!-- "OUR ELITE FLEET" SHOWCASE SECTION (Details buttons linked directly to tariff.html) -->
+        <!-- COLUMN 2: UTILITY DESCRIPTIONS -->
+        <aside class="details-panel" aria-label="Service highlights">
+            <div class="highlight-card">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="m9 11 2 2 4-4"/>
+                    </svg>
+                    Safety Protocols
+                </h3>
+                <p>We ensure each journey matches stringent safety guidelines, employing professional, vetted drivers and tracking commutes in real-time.</p>
+            </div>
+
+            <div class="highlight-card">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    On-Time Guarantee
+                </h3>
+                <p>Punctuality forms the bedrock of our dispatcher targets. All regional local pickups and outbound drop taxis are systematically scheduled in advance.</p>
+            </div>
+
+            <div class="highlight-card">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    Factual Booking Records
+                </h3>
+                <p>Enjoy plain communication without unverified stats. Our quotes are processed strictly based on regional GPS calculations.</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- OUR VEHICLE FLEET SHOWCASE -->
     <section class="fleet-showcase">
         <div class="showcase-header">
-            <h2>Our Elite Fleet</h2>
-            <p>Well-maintained, sanitized cabs for every journey.</p>
+            <h2>Our Fleet Specifications</h2>
+            <p>Well-maintained and commercially licensed vehicles matching your journey requirements.</p>
         </div>
-        <div class="elite-list">
-            <!-- Sedan Card -->
+        <div class="elite-grid">
+            
+            <!-- Sedan Class Card (Placeholder matches sedan.*) -->
             <div class="elite-card">
-                <div class="elite-badge">4+1 SEATS</div>
+                <div class="elite-badge">4+1 Passengers</div>
                 <div class="elite-img-box">
-                    <img src="sedan.png" alt="Prime Sedan">
+                    <!-- Note: points to sedan.png but works with any uploaded sedan.* format -->
+                    <img src="sedan.png" alt="Sedan class details">
                 </div>
                 <div class="elite-meta-row">
                     <div class="elite-info-side">
-                        <h3 class="elite-title">PRIME SEDAN<br>(DZIRE/ETIOS)</h3>
+                        <h3 class="elite-title">Sedan</h3>
                         <div class="elite-sub">
-                            <span class="elite-stars">★★★★★</span>
-                            <span class="elite-verified">VERIFIED VEHICLE</span>
+                            <span class="elite-verified">Standard Sedan Class</span>
                         </div>
                     </div>
                     <div class="elite-price-side">
                         <div class="elite-price-val">₹14<span>/km</span></div>
-                        <div class="elite-price-lbl">STARTING RATE</div>
+                        <div class="elite-price-lbl">Starting Outstation Rate</div>
                     </div>
                 </div>
                 <div class="elite-actions-row">
-                    <a href="tariff.html" class="elite-btn elite-btn-details">DETAILS</a>
+                    <button onclick="openModal('termsModal')" class="elite-btn elite-btn-details">DETAILS</button>
                     <a href="#booking-anchor" class="elite-btn elite-btn-book">BOOK NOW</a>
                 </div>
             </div>
 
-            <!-- Prime SUV Card (Ertiga, Innova, Kia Carens @ ₹19/km) -->
+            <!-- SUV Card (Placeholder matches suv.*) -->
             <div class="elite-card">
-                <div class="elite-badge">6+1 SEATS</div>
+                <div class="elite-badge">6+1 Passengers</div>
                 <div class="elite-img-box">
-                    <img src="suv.png" alt="Prime SUV">
+                    <!-- Note: points to suv.png but works with any uploaded suv.* format -->
+                    <img src="suv.png" alt="SUV class details">
                 </div>
                 <div class="elite-meta-row">
                     <div class="elite-info-side">
-                        <h3 class="elite-title">PRIME SUV<br>(ERTIGA/INNOVA/CARENS)</h3>
+                        <h3 class="elite-title">SUV</h3>
                         <div class="elite-sub">
-                            <span class="elite-stars">★★★★★</span>
-                            <span class="elite-verified">VERIFIED VEHICLE</span>
+                            <span class="elite-verified">Multi-Passenger Utility</span>
                         </div>
                     </div>
                     <div class="elite-price-side">
                         <div class="elite-price-val">₹19<span>/km</span></div>
-                        <div class="elite-price-lbl">STARTING RATE</div>
+                        <div class="elite-price-lbl">Starting Outstation Rate</div>
                     </div>
                 </div>
                 <div class="elite-actions-row">
-                    <a href="tariff.html" class="elite-btn elite-btn-details">DETAILS</a>
+                    <button onclick="openModal('termsModal')" class="elite-btn elite-btn-details">DETAILS</button>
                     <a href="#booking-anchor" class="elite-btn elite-btn-book">BOOK NOW</a>
                 </div>
             </div>
 
-            <!-- Premium SUV Card (Crysta, Hycross @ ₹25/km) -->
+            <!-- Premium SUV Card (Placeholder matches premium-suv.*) -->
             <div class="elite-card">
-                <div class="elite-badge">7+1 SEATS</div>
+                <div class="elite-badge">7+1 Passengers</div>
                 <div class="elite-img-box">
-                    <img src="premiumsuv.png" alt="Premium SUV">
+                    <!-- Note: points to premium-suv.png but works with any uploaded premium-suv.* format -->
+                    <img src="premium-suv.png" alt="Premium SUV details">
                 </div>
                 <div class="elite-meta-row">
                     <div class="elite-info-side">
-                        <h3 class="elite-title">PREMIUM SUV<br>(CRYSTA/HYCROSS)</h3>
+                        <h3 class="elite-title">Premium SUV</h3>
                         <div class="elite-sub">
-                            <span class="elite-stars">★★★★★</span>
-                            <span class="elite-verified">VERIFIED VEHICLE</span>
+                            <span class="elite-verified">Executive Class Utility</span>
                         </div>
                     </div>
                     <div class="elite-price-side">
                         <div class="elite-price-val">₹25<span>/km</span></div>
-                        <div class="elite-price-lbl">STARTING RATE</div>
+                        <div class="elite-price-lbl">Starting Outstation Rate</div>
                     </div>
                 </div>
                 <div class="elite-actions-row">
-                    <a href="tariff.html" class="elite-btn elite-btn-details">DETAILS</a>
+                    <button onclick="openModal('termsModal')" class="elite-btn elite-btn-details">DETAILS</button>
                     <a href="#booking-anchor" class="elite-btn elite-btn-book">BOOK NOW</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- RELOCATED SURCHARGES SECTION (Positioned Directly Under Elite Fleet Section with Unified Margin Gap) -->
-    <div class="surcharges-section">
-        <div class="icon-box-dark">⚡</div>
-        <h2 class="s-title">SURCHARGES</h2>
-        <div class="s-card">
-            <div class="s-card-title">TOLL & PARKING</div>
-            <div class="s-card-text">All toll charges, parking fees, and state entry permits are extra and must be directly settled by the customer.</div>
-        </div>
-        <div class="s-card">
-            <div class="s-card-title">DRIVER ALLOWANCE</div>
-            <div class="s-card-text">Driver Bata is applicable daily. Driving between 10 PM and 6 AM incurs an additional night surcharge.</div>
-        </div>
-    </div>
-
-    <!-- NEW SMART TRAVEL SECTION (Floating card with rounded corners) -->
-    <section class="smart-travel-section">
-        <!-- Circular Icon Features Grid -->
-        <div class="smart-feature-grid">
-            <div class="smart-feature-item">
-                <div class="smart-icon-box">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        <path d="m9 11 2 2 4-4"/>
-                    </svg>
-                </div>
-                <div class="smart-feature-text">Verified Drivers</div>
-            </div>
-            <div class="smart-feature-item">
-                <div class="smart-icon-box">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12 6 12 12 16 14"/>
-                    </svg>
-                </div>
-                <div class="smart-feature-text">On-Time Pickup</div>
-            </div>
-            <div class="smart-feature-item">
-                <div class="smart-icon-box">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <circle cx="12" cy="8" r="7"/>
-                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
-                    </svg>
-                </div>
-                <div class="smart-feature-text">Premium Fleet</div>
-            </div>
-            <div class="smart-feature-item">
-                <div class="smart-icon-box">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                        <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                </div>
-                <div class="smart-feature-text">GPS Tracked</div>
-            </div>
-        </div>
-
-        <!-- Rich Content Description Section -->
-        <div class="smart-content">
-            <h2>The Smartest Way To Travel Between Cities.</h2>
-            <p class="smart-desc">We've reimagined intercity travel. No more haggling with drivers or worrying about hidden toll charges. Get instant quotes and professional service every time.</p>
             
-            <div class="check-list">
-                <div class="check-item">
-                    <div class="check-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#25d366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="8 12 11 15 16 9"/>
-                        </svg>
-                    </div>
-                    <div class="check-content">
-                        <h4>One-Way Advantage</h4>
-                        <p>Pay only for the distance you travel, not for the return trip.</p>
-                    </div>
+        </div>
+    </section>
+
+    <!-- TRANSPARENT BILLING POLICIES -->
+    <section class="billing-transparency">
+        <div class="showcase-header">
+            <h2>Transparent Billing Rules</h2>
+            <p>We believe in clear, explicit financial agreements before booking confirmations.</p>
+        </div>
+        <div class="billing-grid">
+            <div class="billing-card">
+                <div class="billing-card-icon">🎫</div>
+                <h3>Toll & Parking Charges</h3>
+                <p>Regional toll taxes, municipal entry permit fees, and specific airport parking charges are always extra. These fees are settled directly at the actual checkout counter by the passenger.</p>
+            </div>
+            <div class="billing-card">
+                <div class="billing-card-icon">🕒</div>
+                <h3>Driver Allowances & Night Bata</h3>
+                <p>A standard driver allowance is applied to daily runs. Journeys extending between 10:00 PM and 6:00 AM carry a small, fixed night surcharge to compensate our travel operators.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SMART TRAVEL BENEFITS -->
+    <section class="smart-travel-section">
+        <h2>Systematic Intercity Mobility Solutions</h2>
+        <p class="smart-desc">We structure outstation travels to provide a clear, dependable, and comfortable experience.</p>
+        
+        <div class="check-list">
+            <div class="check-item">
+                <div class="check-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="8 12 11 15 16 9"/>
+                    </svg>
                 </div>
-                <div class="check-item">
-                    <div class="check-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#25d366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="8 12 11 15 16 9"/>
-                        </svg>
-                    </div>
-                    <div class="check-content">
-                        <h4>Transparent Billing</h4>
-                        <p>Detailed breakdown of tolls, parking, and driver allowances.</p>
-                    </div>
+                <div class="check-content">
+                    <h4>True One-Way Fares</h4>
+                    <p>When booking one-way transits, your fare is calculated strictly for the distance traveled. There are no hidden return mileage calculations.</p>
                 </div>
-                <div class="check-item">
-                    <div class="check-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#25d366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="8 12 11 15 16 9"/>
-                        </svg>
-                    </div>
-                    <div class="check-content">
-                        <h4>Luxury For Everyone</h4>
-                        <p>From executive sedans to spacious SUVs, we have it all.</p>
-                    </div>
+            </div>
+            <div class="check-item">
+                <div class="check-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="8 12 11 15 16 9"/>
+                    </svg>
+                </div>
+                <div class="check-content">
+                    <h4>Direct Operational Calculations</h4>
+                    <p>All distance calculations rely on real GPS matrix engines. Your quote includes free designated kilometers with no arbitrary hidden additions.</p>
+                </div>
+            </div>
+            <div class="check-item">
+                <div class="check-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="8 12 11 15 16 9"/>
+                    </svg>
+                </div>
+                <div class="check-content">
+                    <h4>Commercial License Standard</h4>
+                    <p>Every partner car holds clean commercial registration documents and undergoes routine mechanical safety checks.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Instant Booking Highlight Card (Slightly Reduced Size) -->
-    <div class="instant-card">
-        <div class="instant-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-        </div>
-        <h3>Instant Booking</h3>
-        <p>Get your cab confirmed in under 60 seconds.</p>
-    </div>
-
-    <!-- Live Support Card (From screenshot, placed below Instant Booking) -->
-    <div class="live-support-card">
-        <div class="live-support-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-        </div>
-        <h3>Live Support</h3>
-        <p>24/7 dedicated support for every journey.</p>
-    </div>
-
-    <!-- RESERVE YOUR JOURNEY (Replacements for the deleted Stats and Reviews blocks) -->
+    <!-- RESERVE CONTAINER -->
     <section class="reserve-section">
         <h2>Reserve Your Journey</h2>
-        <p>Choose your destination and indulge in professional highway mobility with absolute transparent pricing and verified professional chauffeurs.</p>
-        <a href="#booking-anchor" class="reserve-btn">INITIATE PREMIUM BOOKING &rarr;</a>
+        <p>Book with clean, upfront pricing guidelines, verified professional drivers, and commercially licensed vehicles.</p>
+        <a href="#booking-anchor" class="reserve-btn">Start Taxi Reservation</a>
     </section>
 
-    <footer class="main-footer">
-        <div style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 10px; font-weight: 700; text-align: center;">Booking: +91 88709 18674</div>
-        <div class="footer-copyright">© 2026 SHOBI TRAVELS. ALL RIGHTS RESERVED.</div>
+    <!-- MAIN FOOTER -->
+    <footer>
+        <div class="app-wrapper">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        🚗 SHOBI TRAVELS
+                    </div>
+                    <p class="footer-text">Providing reliable outstation drop taxis, corporate rentals, and point-to-point urban travel across Coimbatore with clear and transparent billing practices.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Helpful Disclosures</h4>
+                    <ul class="footer-links">
+                        <li><button onclick="openModal('faqModal')">Frequently Asked Questions</button></li>
+                        <li><button onclick="openModal('privacyModal')">Privacy Policy</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Legal Disclosures</h4>
+                    <ul class="footer-links">
+                        <li><button onclick="openModal('cancellationModal')">Refund & Cancellation Terms</button></li>
+                        <li><button onclick="openModal('termsModal')">Terms of Service</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>Booking Hotline: +91 88709 18674</p>
+                <p style="margin-top: 8px;">© 2026 SHOBI TRAVELS. ALL RIGHTS RESERVED. OPERATED FROM COIMBATORE, INDIA.</p>
+            </div>
+        </div>
     </footer>
 
     <!-- Google Ads High-Converting Split Sticky Bottom Bar -->
     <div class="fixed-bottom">
         <a href="tel:+918870918674" class="btn-main-call">
-            <!-- SVG Call Icon -->
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
             CALL NOW
         </a>
         <a href="https://wa.me/918870918674" class="btn-main-whatsapp">
-            <!-- SVG WhatsApp Icon -->
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.115-2.908-6.995-1.878-1.88-4.357-2.912-6.997-2.914-5.443 0-9.873 4.419-9.877 9.864-.001 1.77.461 3.5 1.341 5.042l-.995 3.634 3.747-.982zm11.233-7.534c-.31-.155-1.837-.907-2.122-.101l-.547.747c-.155.155-.31.31-.62.155-1.24-.62-2.12-.928-2.944-1.748-.206-.206-.31-.412-.155-.618l.515-.515c.155-.155.206-.31.31-.515.103-.206.051-.412-.026-.566-.077-.155-.618-1.493-.846-2.04-.22-.53-.443-.456-.607-.464-.156-.008-.337-.008-.517-.008s-.466.067-.711.335c-.246.268-.94.918-.94 2.242s.963 2.6 1.096 2.781c.133.18 1.896 2.896 4.593 4.06.64.277 1.141.443 1.53.567.643.204 1.229.175 1.691.107.514-.077 1.517-.618 1.73-.122s.31.96.206 1.12c-.103.16-.515.258-.773.258z"/>
             </svg>
             WHATSAPP
         </a>
     </div>
 
-    <!-- STRICTLY RESTORED ORIGINAL SIDE NAVIGATION MENU AND OVERLAY INSIDE THE APP CONTAINER -->
-    <div class="menu-overlay" id="navOverlay" onclick="toggleMenu()"></div>
-    <div class="side-menu" id="sideNav">
-        <div class="side-menu-header">
-            <div class="logo">
-                <div class="logo-icon">🚗</div>
-                SHOBI TRAVELS
-            </div>
-            <button class="icon-btn" style="background: #1e1f2f; color: white;" onclick="toggleMenu()">✕</button>
-        </div>
-        <div class="side-menu-content">
-            <div class="nav-section-title">QUICK NAVIGATION</div>
-            <div class="nav-links">
-                <a href="index.html">Homepage</a>
-                <a href="routes.html">Route Map</a>
-                <a href="tariff.html">Tariff Card</a>
-                <a href="faq.html">FAQs</a>
-                <a href="privacy.html">Privacy & Terms</a>
-            </div>
-            <div class="nav-section-title">GET IN TOUCH</div>
+</div> <!-- ends .app-wrapper -->
+
+<!-- INLINE COMPLIANCE MODALS (SINGLE-PAGE COMPATIBILITY) -->
+
+<!-- FAQ Modal -->
+<div class="modal-overlay" id="faqModal">
+    <div class="modal-container">
+        <button class="modal-close-btn" onclick="closeModal('faqModal')">✕</button>
+        <h3 class="modal-title">Frequently Asked Questions</h3>
+        <div class="modal-body">
+            <h4>Are parking fees and state taxes included in the estimate?</h4>
+            <p>No, our dynamic calculator generates the base transit fare. Toll plaza clearances, state entry tax permits, and local parking fees are paid directly by the client during travel.</p>
             
-            <a href="https://maps.google.com/?q=Shobi+Travels,+Civil+Aerodrome,+Coimbatore,+Tamil+Nadu,+India" target="_blank" class="contact-card">
-                <div class="contact-icon-small">📍</div>
-                <div class="contact-text">Shobi Travels<br>Civil Aerodrome, Coimbatore</div>
-            </a>
-            <a href="tel:+918870918674" class="contact-card">
-                <div class="contact-icon-small">📞</div>
-                <div class="contact-text">+91 88709 18674</div>
-            </a>
-            <a href="mailto:booking@shobitravels.com" class="contact-card">
-                <div class="contact-icon-small">✉️</div>
-                <div class="contact-text">BOOKING@SHOBITRAVELS.COM</div>
-            </a>
-        </div>
-        <div class="side-menu-footer">
-            <div class="footer-copyright">© 2026 SHOBI TRAVELS.</div>
+            <h4>What is the calculation process for outstation round trips?</h4>
+            <p>Round trips are calculated with a standard minimum billing metric of 250 KM per day. The final invoice includes total physical distance, daily driver allowance, and any wait duration charges.</p>
+            
+            <h4>How are hourly rentals computed?</h4>
+            <p>Local hourly packages are structured with predefined duration blocks (e.g., 3 Hours with 30 KM included). Additional hours and extra distance are billed separately at standard flat rates.</p>
+
+            <h4>How is the driver allowance calculated?</h4>
+            <p>Driver allowance is structured as a daily charge to cover meals and accommodation during multi-day or long-distance travel. Night driving carries an additional surcharge.</p>
         </div>
     </div>
+</div>
 
-</div> <!-- ends .app-container -->
+<!-- Privacy Policy Modal -->
+<div class="modal-overlay" id="privacyModal">
+    <div class="modal-container">
+        <button class="modal-close-btn" onclick="closeModal('privacyModal')">✕</button>
+        <h3 class="modal-title">Privacy Policy</h3>
+        <div class="modal-body">
+            <p><strong>Effective Date:</strong> January 1, 2026</p>
+            <p>At Shobi Travels, accessible from our single-page platform, the privacy of our visitors is of primary importance. This Privacy Policy outlines the types of information we collect and how we use it.</p>
+            
+            <h4>Information We Collect</h4>
+            <p>When you request a fare calculation or book a ride on our website, we collect travel parameters including pickup address, drop address, scheduled date/time, and contact mobile numbers. This information is processed strictly to facilitate transportation services.</p>
+            
+            <h4>Tracking Technologies & Google Services</h4>
+            <p>We use Google Tags (gtag.js) and Google Conversion tracking to measure the performance of our advertising initiatives. These tools do not collect personally identifiable offline characteristics without explicit consent.</p>
+            
+            <h4>Data Retention & Security</h4>
+            <p>All transient booking data shared through our website forms is secured using modern security protocols to prevent unauthorized access. We do not sell, trade, or rent user demographic data to third parties.</p>
+        </div>
+    </div>
+</div>
 
+<!-- Cancellation Policy Modal -->
+<div class="modal-overlay" id="cancellationModal">
+    <div class="modal-container">
+        <button class="modal-close-btn" onclick="closeModal('cancellationModal')">✕</button>
+        <h3 class="modal-title">Refund & Cancellation Policy</h3>
+        <div class="modal-body">
+            <p>We believe in honest and transparent refund structures. Please read the terms below carefully before completing your reservation.</p>
+            
+            <h4>Cancellation Timeframes</h4>
+            <p>• Cancellations requested up to 24 hours prior to the scheduled pickup time are eligible for a complete (100%) refund without penalties.</p>
+            <p>• Cancellations requested within 12 to 24 hours of the pickup time may incur a nominal cancellation charge representing up to 10% of the calculated base fare.</p>
+            <p>• Same-day cancellations requested less than 12 hours prior to dispatch incur driver allocation overheads. A standard driver mobilization fee will be deducted from your deposit.</p>
+            
+            <h4>Refund Execution</h4>
+            <p>All eligible refunds are processed back to the original payment source within 5 to 7 working days, subject to standard banking clearance times.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div class="modal-overlay" id="termsModal">
+    <div class="modal-container">
+        <button class="modal-close-btn" onclick="closeModal('termsModal')">✕</button>
+        <h3 class="modal-title">Terms of Service</h3>
+        <div class="modal-body">
+            <p>Welcome to Shobi Travels. By accessing our platform and using our calculated route services, you agree to comply with the following operational terms:</p>
+            
+            <h4>Operational Guidelines</h4>
+            <p>• All vehicles provided are commercially licensed, fully insured, and operated by verified driving partners complying with Indian Motor Vehicle regulations.</p>
+            <p>• Calculated rates are based on GPS estimations. Deviations or additional detours requested during travel are subject to direct mileage adjustments at standard rates.</p>
+            
+            <h4>Customer Responsibilities</h4>
+            <p>• Customers are directly responsible for settling physical tolls, municipal boundary entry permits, and terminal parking receipts at actual rates during travel.</p>
+            <p>• Luggage limits must align with selected vehicle capacity restrictions (Sedan vs SUV) to ensure safe operational weights.</p>
+            
+            <h4>Disputes and Jurisdiction</h4>
+            <p>Any disputes arising from transportation agreements are subject to arbitration and fall under the exclusive jurisdiction of the courts in Coimbatore, Tamil Nadu, India.</p>
+        </div>
+    </div>
+</div>
+
+<!-- PRESERVED EXACT GOOGLE MAPS SCRIPT IMPLEMENTATION -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7j5s8T369OKe4H69e3jhkGfM2sJhniCo&libraries=places&callback=initMap" async defer></script>
 
 <script>
+    // PRESERVED ORIGINAL DATE INITIALIZATION LOGIC
     document.addEventListener('DOMContentLoaded', () => {
         let today = new Date().toISOString().split('T')[0];
         document.getElementById("date-input").value = today;
@@ -1154,6 +1535,46 @@
         switchMainTab(document.querySelector('.tab.active'), 'local');
     });
 
+    // THREE-DOT DROPDOWN INTERACTION
+    function toggleThreeDotMenu(event) {
+        event.stopPropagation();
+        const dropdown = document.getElementById('threeDotDropdown');
+        dropdown.classList.toggle('active');
+    }
+
+    // Modal Display Controls
+    function openModal(modalId) {
+        closeAllModals();
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        document.getElementById('threeDotDropdown').classList.remove('active');
+    }
+
+    // Helper functions
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    function closeAllModals() {
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
+            modal.classList.remove('active');
+        });
+        document.body.style.overflow = '';
+    }
+
+    // Close elements on clicking outside
+    window.addEventListener('click', () => {
+        document.getElementById('threeDotDropdown').classList.remove('active');
+    });
+
+    // PRESERVED EXACT GOOGLE MAPS AUTOCOMPLETE BINDINGS
     function initMap() {
         const pickupOptions = { componentRestrictions: { country: "in" } };
         const dropOptions = { componentRestrictions: { country: "in" } };
@@ -1163,11 +1584,11 @@
         dropAutocomplete.addListener('place_changed', resetFareUI);
     }
 
-    // Dynamic Geolocation Handler (Resolves user location & fills the Pickup input)
+    // PRESERVED GEOLOCATION HANDLER
     function getCurrentLocation() {
         if (navigator.geolocation) {
             const gpsBtn = document.querySelector('.gps-btn');
-            gpsBtn.style.color = '#ffb300';
+            gpsBtn.style.color = '#dc2626';
             
             navigator.geolocation.getCurrentPosition(position => {
                 const lat = position.coords.latitude;
@@ -1195,15 +1616,16 @@
         }
     }
 
+    // PRESERVED RESET FUNCTION
     function resetFareUI() {
         document.getElementById('fare-result-box').style.display = 'none';
         document.getElementById('btn-whatsapp').style.display = 'none';
         const btnCalc = document.getElementById('btn-calculate');
         btnCalc.style.display = 'block';
-        btnCalc.innerText = "CALCULATE FARE ⚡";
+        btnCalc.innerText = "CALCULATE FARE";
     }
 
-    // EXACT original switchMainTab function to preserve your robust calculations
+    // PRESERVED ORIGINAL TAB SWITCH MECHANICS
     function switchMainTab(element, mode) {
         document.querySelectorAll('.main-tabs .tab').forEach(t => t.classList.remove('active'));
         element.classList.add('active');
@@ -1242,13 +1664,14 @@
         resetFareUI();
     }
 
+    // PRESERVED FLEET SELECTION MECHANICS
     function selectFleet(element) {
         document.querySelectorAll('.fleet-card').forEach(c => c.classList.remove('selected'));
         element.classList.add('selected');
         resetFareUI();
     }
 
-    // Google Maps Matrix calculation rules
+    // PRESERVED FARE TRIGGER METHOD
     function calculateFare() {
         const origin = document.getElementById('pickup-input').value;
         const tripType = document.getElementById('active-trip-type').value;
@@ -1291,7 +1714,7 @@
         }, function(response, status) {
             if (status !== 'OK' || response.rows[0].elements[0].status === 'ZERO_RESULTS') {
                 alert('Error calculating route. Please check the locations.');
-                btn.innerText = "CALCULATE FARE ⚡";
+                btn.innerText = "CALCULATE FARE";
                 return;
             }
             
@@ -1301,6 +1724,7 @@
         });
     }
 
+    // PRESERVED PRICING CALCULATION LOGIC
     function processPricingLogic(distance, durationSec, destination, tripType) {
         const activeCar = document.querySelector('.fleet-card.selected').getAttribute('data-car');
         const rateOneway = parseFloat(document.querySelector('.fleet-card.selected').getAttribute('data-rate-oneway'));
@@ -1377,13 +1801,14 @@
         showWhatsAppBtn();
     }
 
+    // PRESERVED UI FARE BUTTON DISPLAY HOOK
     function showWhatsAppBtn() {
         document.getElementById('fare-result-box').style.display = 'block';
         document.getElementById('btn-calculate').style.display = 'none';
         document.getElementById('btn-whatsapp').style.display = 'block';
     }
 
-    // Generates pre-populated WhatsApp message matching trip details
+    // PRESERVED WHATSAPP STRING PREPARATION AND OUTBOUND LINK GENERATOR
     function sendWhatsAppQuote() {
         const type = document.getElementById('active-trip-type').value;
         const pickup = document.getElementById('pickup-input').value || "Not specified";
@@ -1411,14 +1836,6 @@
         
         window.open(`https://wa.me/918870918674?text=${encodeURIComponent(message)}`, "_blank");
     }
-
-    // Navigation overlay controls
-    function toggleMenu() {
-        document.getElementById('navOverlay').classList.toggle('active');
-        document.getElementById('sideNav').classList.toggle('active');
-        document.body.style.overflow = document.getElementById('sideNav').classList.contains('active') ? 'hidden' : '';
-    }
-
 </script>
 
 </body>
